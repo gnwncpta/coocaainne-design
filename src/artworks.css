@@ -75,3 +75,50 @@ header a.about-me:hover {
     color: #111;
     background-color: var(--lime);
 }
+
+section.artworks {
+    padding: 50px;
+    box-sizing: border-box;
+    margin-top: 90px;
+    display: grid;
+    align-content: center;
+    justify-content: center;
+    grid-template-columns: repeat(3, 398px);
+    grid-template-rows: repeat(4, 398px);
+    gap: 76px;
+}
+
+section.artworks img {
+    cursor: pointer;
+    border: 1px solid transparent;
+}
+
+section.artworks img:hover {
+    border-radius: 10px;
+    border: 1px solid rgb(117, 117, 117);
+}
+
+footer {
+    color: white;
+    margin-top: 400px;
+    padding: 50px 0px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+footer .left {
+    display: flex;
+    align-items: center;
+}
+
+footer .left a {
+    text-decoration: none;
+    color: white;
+    font-weight: 300;
+    margin-left: 50px;
+}
+
+footer p {
+    font-weight: 300;
+}
