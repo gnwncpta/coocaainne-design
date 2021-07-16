@@ -1,2 +1,2 @@
-# coocaainne
-coocaainne web profile
+# Coocaainne
+coocaainne's web profile
