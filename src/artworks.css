@@ -1,0 +1,77 @@
+:root {
+    --main-bg: #010101;
+    --lime: #BAFF00;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif;
+}
+
+.container {
+    width: 80%;
+    margin: auto;
+}
+
+
+body {
+    background-color: var(--main-bg);
+}
+
+main {
+
+}
+
+header {
+    padding: 40px 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+header a {
+    text-decoration: none;
+    color: white;
+    font-size: 14px;
+    font-weight: 300;
+}
+
+header img {
+    cursor: pointer;
+}
+
+header nav a {
+    margin: 0 10px;
+    padding: 10px 20px;
+}
+
+header nav a.active {
+    border-radius: 50px;
+    font-weight: 400;
+    background-color: white;
+    color: var(--main-bg);
+    background-color: white;
+}
+
+header nav a:hover {
+    border-radius: 50px;
+    background-color: white;
+    color: var(--main-bg);
+}
+
+header a.about-me {
+    padding: 10px 15px;
+}
+
+header a.about-me.active {
+    color: #111;
+    border-radius: 50px;
+    background-color: var(--lime);
+}
+
+header a.about-me:hover {
+    border-radius: 50px;
+    color: #111;
+    background-color: var(--lime);
+}

@@ -1,0 +1,172 @@
+:root {
+    --main-bg: #010101;
+    --lime: #BAFF00;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif;
+}
+
+.container {
+    width: 80%;
+    margin: auto;
+}
+
+
+body {
+    background-color: var(--main-bg);
+}
+
+main {
+
+}
+
+header {
+    padding: 40px 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+header img {
+    cursor: pointer;
+}
+
+header a {
+    text-decoration: none;
+    color: white;
+    font-size: 14px;
+    font-weight: 300;
+}
+
+header nav a {
+    margin: 0 10px;
+    padding: 10px 20px;
+}
+
+header nav a:hover {
+    border-radius: 50px;
+    background-color: white;
+    color: var(--main-bg);
+}
+
+header a.about-me {
+    padding: 10px 15px;
+}
+
+header a.about-me.active {
+    color: #111;
+    font-weight: 400;
+    border-radius: 50px;
+    background-color: var(--lime);
+}
+
+header a.about-me:hover {
+    border-radius: 50px;
+    color: #111;
+    background-color: var(--lime);
+}
+
+section.about {
+    width: 50%;
+    margin: auto;
+    color: white;
+}
+
+section.about .profile {
+    margin-top: 30px;
+    display: flex;
+    align-items: center;
+}
+
+section.about .profile .profile-cta {
+    margin-left: 65px;
+}
+
+section.about .profile .profile-cta .hi {
+    font-weight: 300;
+    font-weight: 16px;
+}
+
+section.about .profile .profile-cta .username {
+    font-size: 40px;
+    font-weight: 600;
+}
+
+section.about .profile .profile-cta .roles {
+    margin-top: 5px;
+    display: flex;
+}
+
+section.about .profile .profile-cta .roles p {
+    font-weight: 300;
+    color: #7B7B7B;
+}
+
+section.about .profile .profile-cta .roles p:nth-child(2){
+    margin-left: 25px;
+}
+
+section.about .profile .profile-cta .roles p:nth-child(3){
+    margin-left: 25px;
+}
+
+section.about .profile .profile-cta .buttons-cta {
+    margin-top: 35px;
+}
+
+section.about .profile .profile-cta .buttons-cta button {
+    cursor: pointer;
+    font-size: 16px;
+    padding: 8px 40px;
+    border-radius: 6px;
+    border: none;
+}
+
+section.about .profile .profile-cta .buttons-cta button:first-child {
+    color: white;
+    background-color: #0DB6FF;
+}
+
+
+section.about .profile .profile-cta .buttons-cta button:last-child {
+    margin-left: 10px;
+    color: white;
+    border: 1px solid white;
+    background-color: transparent;
+}
+
+section.about .profession {
+    /* padding: 10px 30px; */
+    border-top: 1px solid rgb(45, 45, 45);
+    margin-top: 90px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+section.about .profession p {
+    cursor: pointer;
+    padding: 10px 30px;
+    font-weight: 300;
+    border-radius: 0px 0px 8px 8px;
+}
+
+section.about .profession p.active {
+    background-color: rgb(45, 45, 45);
+}
+
+section.about .profession p:hover {
+    background-color: rgb(45, 45, 45);
+}
+
+section.about .profession-about {
+    margin-top: 90px;
+}
+
+section.about .profession-about p {
+    font-weight: 300;
+    padding: 0 30px;
+}
