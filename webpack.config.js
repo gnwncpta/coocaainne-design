@@ -5,7 +5,9 @@ module.exports = {
     mode: 'development',
     entry: {
         index: './src/index.js',
-        aboutMe: './src/aboutMe.js'
+        aboutMe: './src/aboutMe.js',
+        artworks: './src/artworks.js',
+        archivedDesign: './src/archivedDesign.js'
     },
     output: {
         filename: '[name].bundled.js',
