@@ -1,4 +1,7 @@
 import './aboutMe.css';
+import GraphicDesign from './words/GraphicDesign';
+import UIUX from './words/UIUX';
+import FrontEnd from './words/FrontEnd';
 
 const logo = document.querySelector('header img');
 const p = document.querySelectorAll('.profession p');
@@ -8,18 +11,6 @@ const emailButton = document.querySelector('button.email');
 const username = document.querySelector('section.about .profile .profile-cta .username');
 const hamburger = document.querySelector('header .hamburger');
 const menuOverlay = document.querySelector('header .hamburger .menu-overlay');
-
-const UI_UX = `Before i jump into code. First i need to design this website first to measure the size of everything.
-               <br>
-               <br>
-               So i know when the design on screen size 768 the design will look like this. And so on`;
-
-const FRONT_END = `After i design the website then i slicing into Front End to realize the design into a website.
-                   <br>
-                   <br>
-                   I use HTML, CSS, JavaScript and Webpack Module Bundler to make better development.
-                   I build this site from scratch ofc, the process is fun to realize my design into a website`;
-
 
 hamburger.addEventListener('click', () => {
     menuOverlay.classList.toggle('show');
@@ -52,22 +43,15 @@ p.forEach(field => {
         
         // Jika yang di klik berisi class gd, maka
         if(e.target.classList.contains('gd')){
-            prefessionDesc.innerHTML = `<p>
-                                            Hi! my name is Muhammad Gunawan Cipta Negara
-                                            I’ve been doing graphic design since 2 years ago.
-                                            <br>
-                                            <br>
-                                            if you don’t know my instagram, you can click that follow button
-                                            i made cool stuff there
-                                        </p>`;
+            prefessionDesc.innerHTML = GraphicDesign;
         
         // Jika yang di klik berisi class uix, maka
         } else if(e.target.classList.contains('uix')){
-            prefessionDesc.innerHTML = UI_UX;
+            prefessionDesc.innerHTML = UIUX;
 
         // Jika yang di klik berisi class fe, maka
         } else if(e.target.classList.contains('fe')){
-            prefessionDesc.innerHTML = FRONT_END;
+            prefessionDesc.innerHTML = FrontEnd;
         }
     })
 })
