@@ -122,3 +122,56 @@ footer .left a {
 footer p {
     font-weight: 300;
 }
+
+@media (min-width: 1025px) and (max-width: 1440px) {
+  
+    header img {
+        width: 40px;
+        height: 27px;
+    }
+
+    header nav a {
+        padding: 8px 15px;
+    }
+
+    header nav a.about-me {
+        padding: 8px 15px;
+    }
+
+    header a.about-me.active {
+        padding: 8px 15px;
+    }
+
+    /* END OF HEADER */
+
+    section.artworks {
+        padding: 50px;
+        box-sizing: border-box;
+        margin-top: 90px;
+        display: grid;
+        align-content: center;
+        justify-content: center;
+        grid-template-columns: repeat(3, 298px);
+        grid-template-rows: repeat(4, 298px);
+        gap: 76px;
+    }
+
+    section.artworks img {
+        width: 298px;
+        height: 298px;
+    }
+
+    footer .left img{
+        width: 40px;
+        height: 27px;
+    }
+
+    footer .left a {
+        font-size: 14px;
+    }
+
+    footer p {
+        font-size: 14px;
+    }
+    
+}

@@ -52,6 +52,61 @@ header nav a:hover {
     color: var(--main-bg);
 }
 
+header .hamburger {
+    cursor: pointer;
+    width: 40px;
+    height: 40px;
+
+    border: 2px solid rgb(122, 122, 122);
+    border-radius: 6px;
+
+    padding: 6px;
+    box-sizing: border-box;
+
+    display: none;
+    flex-direction: column;
+    justify-content: space-around;
+
+    position: relative;
+}
+
+header .hamburger .line {
+    width: 100%;
+    height: 2px;
+
+    background-color: rgb(122, 122, 122);
+}
+
+header .hamburger .menu-overlay.show {
+    display: flex;
+}
+
+header .hamburger .menu-overlay {
+    position: absolute;
+    top: 38px;
+    right: 0px;
+    padding: 20px;
+    
+    width: 150px;
+    z-index: 1;
+
+    display: none;
+    flex-direction: column;
+    border-radius: 10px;
+    background-color: white;
+}
+
+header .hamburger .menu-overlay a {
+    color: #111;
+    font-weight: 400;
+    font-size: 14px;
+    margin: 15px 0;
+}
+
+header .hamburger .menu-overlay a:hover {
+    color: red;
+}
+
 header a.about-me {
     padding: 10px 15px;
 }
@@ -93,6 +148,12 @@ section.about .profile .profile-cta .hi {
 section.about .profile .profile-cta .username {
     font-size: 40px;
     font-weight: 600;
+    width: fit-content;
+}
+
+section.about .profile .profile-cta .username:hover {
+    cursor: pointer;
+    text-decoration: underline;
 }
 
 section.about .profile .profile-cta .roles {
@@ -164,9 +225,508 @@ section.about .profession p:hover {
 
 section.about .profession-about {
     margin-top: 90px;
+    margin-bottom: 200px;
 }
 
 section.about .profession-about p {
     font-weight: 300;
     padding: 0 30px;
+}
+
+@media (min-width: 1025px) and (max-width: 1440px) {
+
+    header img {
+        width: 40px;
+        height: 27px;
+    }
+
+    header nav a {
+        padding: 8px 15px;
+    }
+
+    header nav a.about-me {
+        padding: 8px 15px;
+    }
+
+    header a.about-me.active {
+        padding: 8px 15px;
+    }
+
+    /* END OF HEADER */
+  
+    section.about .profile img {
+        width: 180px;
+        height: 180px;
+    }
+
+    section.about .profile .profile-cta {
+        margin-left: 40px;
+    }
+
+    section.about .profile .profile-cta .hi {
+        font-weight: 300;
+        font-weight: 14px;
+    }
+    
+    section.about .profile .profile-cta .username {
+        font-size: 35px;
+        font-weight: 600;
+    }
+    
+    section.about .profile .profile-cta .roles {
+        margin-top: 8px;
+        width: 400px;
+    }
+
+    section.about .profile .profile-cta .roles p {
+        font-size: 14px;
+    }
+
+    section.about .profile .profile-cta .buttons-cta {
+        margin-top: 30px;
+    }
+
+    section.about .profile .profile-cta .buttons-cta button {
+        font-size: 12px;
+        padding: 8px 28px;
+    }
+
+    section.about .profession p {
+        font-size: 14px;
+    }
+    
+}
+
+@media (max-width: 1159px){
+    section.about .profession p {
+        font-size: 12px;
+    }
+}
+
+@media (max-width: 1058px){
+    section.about .profession p {
+        font-size: 10px;
+    }
+}
+
+@media (min-width: 769px) and (max-width: 1024px) {
+
+    
+    header img {
+        width: 40px;
+        height: 27px;
+    }
+
+    header a {
+        font-size: 12px;
+    }
+
+    header nav a {
+        padding: 8px 15px;
+    }
+
+    header nav a.about-me {
+        padding: 8px 15px;
+    }
+
+    header a.about-me.active {
+        padding: 8px 15px;
+    }
+    
+    section.about .profile {
+        margin-top: 50px;
+    }
+
+    section.about .profile img {
+        width: 160px;
+        height: 160px;
+    }
+
+    section.about .profile .profile-cta {
+        margin-left: 40px;
+    }
+
+    section.about .profile .profile-cta .hi {
+        font-size: 12px;
+    }
+    
+    section.about .profile .profile-cta .username {
+        font-size: 25px;
+        font-weight: 600;
+    }
+    
+    section.about .profile .profile-cta .roles {
+        margin-top: 8px;
+        width: 350px;
+    }
+
+    section.about .profile .profile-cta .roles p {
+        font-size: 12px;
+    }
+
+    section.about .profile .profile-cta .buttons-cta {
+        margin-top: 30px;
+    }
+
+    section.about .profile .profile-cta .buttons-cta button {
+        font-size: 12px;
+        padding: 5px 20px;
+    }
+
+    section.about .profession {
+        /* border: 1px solid red; */
+    }
+    
+    section.about .profession p {
+        padding: 10px 20px;
+        font-size: 11px;
+    }
+
+    section.about .profession-about p {
+        font-size: 11px;
+    }
+
+}
+
+@media (min-width: 481px) and (max-width: 768px) {
+
+    header img {
+        width: 40px;
+        height: 27px;
+    }
+
+    header a {
+        font-size: 12px;
+    }
+
+    header nav {
+        display: none;
+    }
+
+    header nav a {
+        padding: 8px 15px;
+    }
+
+    header nav a.about-me {
+        padding: 8px 15px;
+        display: none;
+    }
+
+    header .hamburger {
+        display: flex;
+    }
+
+    header .hamburger .menu-overlay.show {
+        display: flex;
+    }
+
+    header a.about-me.active {
+        padding: 8px 15px;
+        display: none;
+    }
+    
+    section.about {
+        width: 100%;
+    }
+
+    section.about .profile {
+        margin-top: 50px;
+    }
+
+    section.about .profile img {
+        width: 45%;
+        height: 45%;
+    }
+
+    section.about .profile .profile-cta {
+        margin-left: 40px;
+    }
+
+    section.about .profile .profile-cta .hi {
+        font-size: 12px;
+    }
+    
+    section.about .profile .profile-cta .username {
+        font-size: 2rem;
+        font-weight: 600;
+    }
+    
+    section.about .profile .profile-cta .roles {
+        margin-top: 8px;
+        display: flex;
+    }
+
+    section.about .profile .profile-cta .roles p {
+        font-size: 12px;
+    }
+
+    section.about .profile .profile-cta .buttons-cta {
+        margin-top: 30px;
+    }
+
+    section.about .profile .profile-cta .buttons-cta button {
+        font-size: 12px;
+        padding: 5px 20px;
+    }
+
+    section.about .profession {
+        /* border: 1px solid red; */
+    }
+    
+    section.about .profession p {
+        padding: 10px 20px;
+        font-size: 12px;
+    }
+
+    section.about .profession-about p {
+        font-size: 12px;
+    }
+    
+}
+
+@media (max-width: 632px){
+
+    section.about .profile .profile-cta .username {
+        font-size: 25px;
+    }
+
+    section.about .profile .profile-cta .roles {
+        display: flex;
+        width: 100%;
+    }
+
+    section.about .profile .profile-cta .roles p {
+        font-size: 12px;
+    }
+
+}
+
+@media (max-width: 500px){
+
+    section.about .profile .profile-cta {
+        margin-left: 25px;
+    }
+
+    section.about .profile .profile-cta .username {
+        font-size: 22px;
+    }
+
+    section.about .profile .profile-cta .roles {
+        width: 200px;
+        flex-wrap: wrap;
+    }
+
+    section.about .profile .profile-cta .roles p {
+        /* border: 1px solid red; */
+        font-size: 12px;
+        
+    }
+
+    section.about .profile .profile-cta .roles p:nth-child(2){
+        margin-left: 10px;
+        margin-top: 2px;
+    }
+
+    section.about .profile .profile-cta .roles p:nth-child(3){
+        margin-left: 0px;
+        margin-top: 2px;
+    }
+
+    section.about .profile .profile-cta .buttons-cta {
+        margin-top: 20px;
+    }
+}
+
+@media (min-width: 376px) and (max-width: 480px) {
+  
+    header img {
+        width: 40px;
+        height: 27px;
+    }
+
+    header a {
+        font-size: 12px;
+    }
+
+    header nav {
+        display: none;
+    }
+
+    header nav a {
+        padding: 8px 15px;
+    }
+
+    header nav a.about-me {
+        padding: 8px 15px;
+        display: none;
+    }
+
+    header .hamburger {
+        display: flex;
+    }
+
+    header .hamburger .menu-overlay.show {
+        display: flex;
+    }
+
+    header a.about-me.active {
+        padding: 8px 15px;
+        display: none;
+    }
+    
+    section.about {
+        width: 100%;
+    }
+
+    section.about .profile {
+        margin-top: 20px;
+    }
+
+    section.about .profile img {
+        width: 37%;
+        height: 37%;
+    }
+
+    section.about .profile .profile-cta {
+        margin-left: 25px;
+    }
+
+    section.about .profile .profile-cta .hi {
+        font-size: 10px;
+    }
+    
+    section.about .profile .profile-cta .username {
+        font-size: 18px;
+    }
+    
+    section.about .profile .profile-cta .roles {
+        margin-top: 8px;
+        display: flex;
+    }
+
+    section.about .profile .profile-cta .roles p {
+        font-size: 12px;
+    }
+
+    section.about .profile .profile-cta .buttons-cta {
+        margin-top: 20px;
+    }
+
+    section.about .profile .profile-cta .buttons-cta button {
+        font-size: 12px;
+        padding: 5px 20px;
+        border-radius: 3px;
+    }
+    
+    section.about .profession p {
+        padding: 10px 20px;
+        font-size: 10px;
+    }
+
+    section.about .profession-about p {
+        font-size: 12px;
+    }
+    
+}
+
+@media (min-width: 280px) and (max-width: 375px){
+    header img {
+        width: 40px;
+        height: 27px;
+    }
+
+    header a {
+        font-size: 12px;
+    }
+
+    header nav {
+        display: none;
+    }
+
+    header nav a {
+        padding: 8px 15px;
+    }
+
+    header nav a.about-me {
+        padding: 8px 15px;
+        display: none;
+    }
+
+    header .hamburger {
+        display: flex;
+    }
+
+    header .hamburger .menu-overlay.show {
+        display: flex;
+    }
+
+    header a.about-me.active {
+        padding: 8px 15px;
+        display: none;
+    }
+    
+    section.about {
+        width: 100%;
+    }
+
+    section.about .profile {
+        margin-top: 20px;
+    }
+
+    section.about .profile img {
+        width: 37%;
+        height: 37%;
+    }
+
+    section.about .profile .profile-cta {
+        margin-left: 25px;
+    }
+
+    section.about .profile .profile-cta .hi {
+        font-size: 10px;
+    }
+    
+    section.about .profile .profile-cta .username {
+        font-size: 18px;
+    }
+    
+    section.about .profile .profile-cta .roles {
+        margin-top: 8px;
+        width: 100px;
+        display: flex;
+    }
+
+    section.about .profile .profile-cta .roles p {
+        font-size: 10px;
+    }
+
+    section.about .profile .profile-cta .roles p:nth-child(2){
+        margin-left: 0px;
+        margin-top: 3px;
+    }
+
+    section.about .profile .profile-cta .roles p:nth-child(3){
+        margin-left: 0px;
+        margin-top: 2px;
+    }
+
+    section.about .profile .profile-cta .buttons-cta {
+        margin-top: 15px;
+    }
+
+    section.about .profile .profile-cta .buttons-cta button {
+        font-size: 10px;
+        border-radius: 3px;
+        padding: 4px 15px;
+    }
+    
+    section.about .profession p {
+        padding: 10px 20px;
+        font-size: 10px;
+    }
+
+    section.about .profession-about p {
+        font-size: 12px;
+    }
+
 }
