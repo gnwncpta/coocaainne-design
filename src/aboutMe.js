@@ -53,8 +53,9 @@ p.forEach(field => {
         } else if(e.target.classList.contains('fe')){
             prefessionDesc.innerHTML = FrontEnd;
         }
-    })
-})
+
+    });
+});
 
 logo.addEventListener('click', () => {
     window.location.href = './index.html';
