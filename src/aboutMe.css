@@ -23,7 +23,18 @@ main {
 
 }
 
+.header-container {
+    position: fixed;
+    top: 0;
+    left: 0;
+
+    width: 100%;
+    background-color: var(--main-bg);
+}
+
 header {
+    width: 80%;
+    margin: auto;
     padding: 40px 0;
     display: flex;
     align-items: center;
@@ -85,9 +96,9 @@ header .hamburger .menu-overlay {
     position: absolute;
     top: 38px;
     right: 0px;
-    padding: 20px;
+    padding: 20px 0px;
     
-    width: 150px;
+    width: 200px;
     z-index: 1;
 
     display: none;
@@ -96,15 +107,27 @@ header .hamburger .menu-overlay {
     background-color: white;
 }
 
+header .hamburger .menu-overlay a.active {
+    color: #111;
+    background-color: var(--lime);
+}
+
+header .hamburger .menu-overlay a.active:hover {
+    color: #111;
+    background-color: var(--lime);
+}
+
 header .hamburger .menu-overlay a {
     color: #111;
     font-weight: 400;
     font-size: 14px;
-    margin: 15px 0;
+    margin: 10px 0;
+    padding: 10px 20px;
 }
 
 header .hamburger .menu-overlay a:hover {
-    color: red;
+    color: #111;
+    background-color: rgba(17, 17, 17, 0.127);
 }
 
 header a.about-me {
@@ -131,7 +154,7 @@ section.about {
 }
 
 section.about .profile {
-    margin-top: 30px;
+    margin-top: 190px;
     display: flex;
     align-items: center;
 }
@@ -334,7 +357,7 @@ section.about .profession-about p {
     }
     
     section.about .profile {
-        margin-top: 50px;
+        margin-top: 190px;
     }
 
     section.about .profile img {
@@ -430,7 +453,7 @@ section.about .profession-about p {
     }
 
     section.about .profile {
-        margin-top: 50px;
+        margin-top: 190px;
     }
 
     section.about .profile img {
@@ -579,7 +602,7 @@ section.about .profession-about p {
     }
 
     section.about .profile {
-        margin-top: 20px;
+        margin-top: 140px;
     }
 
     section.about .profile img {
@@ -670,7 +693,7 @@ section.about .profession-about p {
     }
 
     section.about .profile {
-        margin-top: 20px;
+        margin-top: 130px;
     }
 
     section.about .profile img {

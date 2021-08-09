@@ -23,7 +23,19 @@ main {
     /* border: 1px solid red; */
 }
 
+.header-container {
+    z-index: 5;
+    position: fixed;
+    top: 0;
+    left: 0;
+
+    width: 100%;
+    background-color: var(--main-bg);
+}
+
 header {
+    width: 80%;
+    margin: auto;
     padding: 40px 0;
     display: flex;
     align-items: center;
@@ -85,9 +97,9 @@ header .hamburger .menu-overlay {
     position: absolute;
     top: 38px;
     right: 0px;
-    padding: 20px;
+    padding: 20px 0px;
     
-    width: 150px;
+    width: 200px;
     z-index: 1;
 
     display: none;
@@ -96,15 +108,27 @@ header .hamburger .menu-overlay {
     background-color: white;
 }
 
+header .hamburger .menu-overlay a.active {
+    color: white;
+    background-color: #111;
+}
+
+header .hamburger .menu-overlay a.active:hover {
+    color: white;
+    background-color: #111;
+}
+
 header .hamburger .menu-overlay a {
     color: #111;
     font-weight: 400;
     font-size: 14px;
-    margin: 15px 0;
+    margin: 10px 0;
+    padding: 10px 20px;
 }
 
 header .hamburger .menu-overlay a:hover {
-    color: red;
+    color: #111;
+    background-color: rgba(17, 17, 17, 0.127);
 }
 
 header a.about-me {
@@ -124,7 +148,7 @@ header a.about-me:hover {
 }
 
 section.home {
-    margin-top: 90px;
+    margin-top: 220px;
     display: flex;
     align-items: center;
     justify-content: space-between;

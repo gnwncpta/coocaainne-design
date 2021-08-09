@@ -3,30 +3,47 @@ import GraphicDesign from './words/GraphicDesign';
 import UIUX from './words/UIUX';
 import FrontEnd from './words/FrontEnd';
 
+let state = 'none';
+
 const logo = document.querySelector('header img');
 const p = document.querySelectorAll('.profession p');
 const prefessionDesc = document.querySelector('.profession-about');
 const followButton = document.querySelector('button.follow');
 const emailButton = document.querySelector('button.email');
 const username = document.querySelector('section.about .profile .profile-cta .username');
-const hamburger = document.querySelector('header .hamburger');
-const menuOverlay = document.querySelector('header .hamburger .menu-overlay');
+const hamburger   = document.querySelector('header .hamburger');
+const menuOverlay   = document.querySelector('header .hamburger .menu-overlay');
+const mainContainer   = document.querySelector('main.container');
 
-hamburger.addEventListener('click', () => {
+// document.body.addEventListener('click', () => {
+//     if(state === 'none') return;
+
+//     if(state === 'clicked'){
+//         console.log('Document clicked.');
+//         document.body.addEventListener('click', () => {
+//             menuOverlay.classList.toggle('show');
+//         })
+//     }
+// });
+
+// console.log(document.body);
+
+hamburger.addEventListener('click', (e) => {
     menuOverlay.classList.toggle('show');
-})
+    console.log(e);
+});
 
 username.addEventListener('click', () => {
     window.location.href = 'https://instagram.com/coocaainne/';
-})
+});
 
 followButton.addEventListener('click', () => {
     window.location.href = 'https://www.instagram.com/accounts/login/?next=%2Fcoocaainne%2F&source=follow';
-})
+});
 
 emailButton.addEventListener('click', () => {
     window.location.href = 'mailto:gnwncpta@gmail.com';
-})
+});
 
 p.forEach(field => {
     field.addEventListener('click', (e) => {

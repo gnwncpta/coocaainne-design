@@ -23,7 +23,18 @@ main {
 
 }
 
+.header-container {
+    position: fixed;
+    top: 0;
+    left: 0;
+
+    width: 100%;
+    background-color: var(--main-bg);
+}
+
 header {
+    width: 80%;
+    margin: auto;
     padding: 40px 0;
     display: flex;
     align-items: center;
@@ -60,6 +71,73 @@ header nav a:hover {
     color: var(--main-bg);
 }
 
+header .hamburger {
+    cursor: pointer;
+    width: 40px;
+    height: 40px;
+
+    border: 2px solid rgb(122, 122, 122);
+    border-radius: 6px;
+
+    padding: 6px;
+    box-sizing: border-box;
+
+    display: none;
+    flex-direction: column;
+    justify-content: space-around;
+
+    position: relative;
+}
+
+header .hamburger .line {
+    width: 100%;
+    height: 2px;
+
+    background-color: rgb(122, 122, 122);
+}
+
+header .hamburger .menu-overlay.show {
+    display: flex;
+}
+
+header .hamburger .menu-overlay {
+    position: absolute;
+    top: 38px;
+    right: 0px;
+    padding: 20px 0px;
+    
+    width: 200px;
+    z-index: 1;
+
+    display: none;
+    flex-direction: column;
+    border-radius: 10px;
+    background-color: white;
+}
+
+header .hamburger .menu-overlay a.active {
+    color: white;
+    background-color: #111;
+}
+
+header .hamburger .menu-overlay a.active:hover {
+    color: white;
+    background-color: #111;
+}
+
+header .hamburger .menu-overlay a {
+    color: #111;
+    font-weight: 400;
+    font-size: 14px;
+    margin: 10px 0;
+    padding: 10px 20px;
+}
+
+header .hamburger .menu-overlay a:hover {
+    color: #111;
+    background-color: rgba(17, 17, 17, 0.127);
+}
+
 header a.about-me {
     padding: 10px 15px;
 }
@@ -79,12 +157,12 @@ header a.about-me:hover {
 section.artworks {
     padding: 50px;
     box-sizing: border-box;
-    margin-top: 90px;
+    margin-top: 190px;
     display: grid;
     align-content: center;
     justify-content: center;
-    grid-template-columns: repeat(3, 398px);
-    grid-template-rows: repeat(4, 398px);
+    grid-template-columns: repeat(3, .5fr);
+    grid-template-rows: repeat(4, .5fr);
     gap: 76px;
 }
 
@@ -145,20 +223,13 @@ footer p {
     /* END OF HEADER */
 
     section.artworks {
-        padding: 50px;
-        box-sizing: border-box;
-        margin-top: 90px;
-        display: grid;
-        align-content: center;
-        justify-content: center;
-        grid-template-columns: repeat(3, 298px);
-        grid-template-rows: repeat(4, 298px);
-        gap: 76px;
+        grid-template-columns: repeat(3, 248px);
+        grid-template-rows: repeat(4, 248px);
     }
 
     section.artworks img {
-        width: 298px;
-        height: 298px;
+        width: 248px;
+        height: 248px;
     }
 
     footer .left img{
@@ -172,6 +243,210 @@ footer p {
 
     footer p {
         font-size: 14px;
+    }
+    
+}
+
+@media (min-width: 769px) and (max-width: 1024px) {
+
+    header img {
+        width: 40px;
+        height: 27px;
+    }
+
+    header nav a {
+        padding: 8px 15px;
+    }
+
+    header nav a.about-me {
+        padding: 8px 15px;
+    }
+
+    header a.about-me.active {
+        padding: 8px 15px;
+    }
+
+    /* END OF HEADER */
+    
+    section.artworks {
+        grid-template-columns: repeat(3, 198px);
+        grid-template-rows: repeat(4, 198px);
+    }
+
+    section.artworks img {
+        width: 198px;
+        height: 198px;
+    }
+
+    footer .left img{
+        width: 40px;
+        height: 27px;
+    }
+
+    footer .left a {
+        font-size: 14px;
+    }
+
+    footer p {
+        font-size: 14px;
+    }
+
+}
+
+@media (max-width: 920px) {
+    section.artworks {
+        grid-template-columns: repeat(2, 248px);
+        grid-template-rows: repeat(5, 248px);
+    }
+
+    section.artworks img {
+        width: 248px;
+        height: 248px;
+    }
+}
+
+@media (min-width: 481px) and (max-width: 768px) {
+
+    header img {
+        width: 40px;
+        height: 27px;
+    }
+
+    header a {
+        font-size: 12px;
+    }
+
+    header nav {
+        display: none;
+    }
+
+    header nav a {
+        padding: 8px 15px;
+    }
+
+    header nav a.about-me {
+        padding: 8px 15px;
+        display: none;
+    }
+
+    header .hamburger {
+        display: flex;
+    }
+
+    header .hamburger .menu-overlay.show {
+        display: flex;
+    }
+
+    header a.about-me {
+        padding: 8px 15px;
+        display: none;
+    }
+
+    section.artworks {
+        grid-template-columns: repeat(2, 248px);
+        grid-template-rows: repeat(5, 248px);
+    }
+
+    footer {
+        margin-top: 200px;
+    }
+
+    footer .left img{
+        width: 20px;
+        height: 17px;
+    }
+
+    footer .left a {
+        font-size: 12px;
+    }
+
+    footer p {
+        font-size: 12px;
+    }
+    
+}
+
+@media (max-width: 690px) {
+    section.artworks {
+        grid-template-columns: repeat(1, 248px);
+        grid-template-rows: repeat(6, 248px);
+    }
+}
+
+@media (min-width: 320px) and (max-width: 480px) {
+  
+    header img {
+        width: 40px;
+        height: 27px;
+    }
+
+    header a {
+        font-size: 12px;
+    }
+
+    header nav {
+        display: none;
+    }
+
+    header nav a {
+        padding: 8px 15px;
+    }
+
+    header nav a.about-me {
+        padding: 8px 15px;
+        display: none;
+    }
+
+    header .hamburger {
+        display: flex;
+    }
+
+    header .hamburger .menu-overlay.show {
+        display: flex;
+    }
+
+    header a.about-me {
+        padding: 8px 15px;
+        display: none;
+    }
+
+    section.artworks {
+        margin-top: 130px;
+    }
+
+    footer {
+        margin-top: 90px;
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    footer .left {
+        align-items: flex-start;
+        flex-direction: column;
+    }
+
+    footer .left img{
+        width: 40px;
+        height: 27px;
+    }
+
+    footer .left a {
+        font-size: 10px;
+    }
+
+    footer .left a:nth-child(2){
+        margin-top: 30px;
+        margin-left: 0px;
+    }
+
+    footer .left a:nth-child(3){
+        margin-top: 30px;
+        margin-left: 0px;
+    }
+
+    footer p {
+        margin-top: 30px;
+        font-size: 10px;
     }
     
 }
